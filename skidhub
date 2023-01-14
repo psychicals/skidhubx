@@ -1,0 +1,91 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+	local Window = Library.CreateLib("Skid HubX", "BloodTheme")
+
+	-- HOME
+	local Home = Window:NewTab("Home")
+	local HomeSection = Home:NewSection("Home")
+
+	HomeSection:NewLabel("Thanks for using Skid HubX")
+	HomeSection:NewLabel("0.0.1c")
+
+	HomeSection:NewButton("Copy Discord Invite", " ", function()
+		setclipboard("https://discord.gg/Sdj5g5Kf6t")
+	end)
+
+	-- MAIN
+	local Main = Window:NewTab("Main")
+	local MainSection = Main:NewSection("Main")
+
+
+	MainSection:NewButton("Infinite Yield", "FE Admin Script", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/yuDMk0Ub"))()
+	end)
+	
+	MainSection:NewButton("Aimbot","Gives universal aimbot", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
+	end)
+	-- PLAYER
+	local Player = Window:NewTab("Player")
+	local PlayerSection = Player:NewSection("Player")
+
+
+	PlayerSection:NewSlider("WalkSpeed", "Sets Walkspeed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+	end)
+
+	PlayerSection:NewSlider("JumpPower", "Sets Jumppower", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+	end)
+
+	PlayerSection:NewButton("Reset WS/JP", "Resets WS/JP", function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+	end)
+	
+	-- JUST GRASS
+		local Grass = Window:NewTab("Just Grass")
+	local GrassSection = Grass:NewSection("Just Grass")
+	
+	
+	GrassSection:NewButton("Dupe boombox", "duplicates boombox", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/EBNC20UC"))()
+end)
+
+GrassSection:NewButton("Dupe Sword", "duplicates sword", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/KyshyhB5"))()
+end)
+
+GrassSection:NewButton("Get Cola", "gives player cola", function()
+	game.Players:Chat("-cola")
+end)
+
+GrassSection:NewButton("Fart explode", "makes you explode and fart", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/aE8Zxv73"))()
+end)
+
+GrassSection:NewButton("Silent re", "adds silent refresh button", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/FDWBskPE"))()
+end)
+
+	local Block = Window:NewTab("Lucky Block")
+	local BlockSection = Block:NewSection("Lucky Block")
+	
+	BlockSection:NewButton("Lucky Block", "gives lucky block items", function()
+		game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+	end)
+	
+	BlockSection:NewButton("Super Block", "gives super block items", function()
+		game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+	end)
+	
+	BlockSection:NewButton("Rainbow Block", "gives rainbow block items", function()
+		game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+	end)
+	
+	BlockSection:NewButton("Diamond Block", "gives diamond block items", function()
+		game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+	end)
+	
+	BlockSection:NewButton("Galaxy Block", "gives galaxy block items", function()
+		game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+	end)
